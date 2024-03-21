@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <body onload="ol()">
+      <img src="https://cdn.glitch.global/6ab5c36c-b9fb-4f09-bde9-a94da34131f7/Rickroll.webp?v=1710211527446" alt="fun" style="width: 500px; height: auto;">
+<script>
+      function ol() {
+        preloadSound()
+        interceptUserInput(event => {
+
+    // Prevent default behavior (breaks closing window shortcuts)
+    event.preventDefault()
+    event.stopPropagation()
+
+    // 'touchstart' and 'touchend' events are not able to open a new window
+    // (at least in Chrome), so don't even try. Checking `event.which !== 0` is just
+    // a clever way to exclude touch events.
+
+
+
+    // Capture key presses on the Command or Control keys, to interfere with the
+    // "Close Window" shortcut.
+    if (event.key === 'Meta' || event.key === 'Control') {
+      both2()
+    } else {
+    }
+        });
+}
+      
+      function interceptUserInput (onInput) {
+  document.body.addEventListener('touchstart', onInput, { passive: false })
+
+  document.body.addEventListener('mousedown', onInput)
+  document.body.addEventListener('mouseup', onInput)
+  document.body.addEventListener('click', onInput)
+
+  document.body.addEventListener('keydown', onInput)
+  document.body.addEventListener('keyup', onInput)
+  document.body.addEventListener('keypress', onInput)
+}
+    </script>
+  </body>
+</html>
