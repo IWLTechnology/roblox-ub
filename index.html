@@ -28,7 +28,7 @@
       </button>
     </div>
     <script>
-      function preloadSound(){
+     function preloadSound(){
     if (!createjs.Sound.initializeDefaultPlugins()) {
           
         } else {
@@ -148,7 +148,7 @@ function windows(){
         function both(){
             createjs.Sound.play('fun');
           wins.push(window.open('/p1.html', '', ''));
-              for(var i = 0; i < 10; i++){
+              for(var i = 0; i < 5; i++){
                 focusWindows();
                 const { x, y } = getRandomCoords();
             const opts = `width=${WIN_WIDTH},height=${WIN_HEIGHT},left=${x},top=${y}`;
